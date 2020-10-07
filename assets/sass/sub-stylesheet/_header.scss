@@ -1,0 +1,223 @@
+//*======= header css start =====*//
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: $white-color;
+    .header-bg {
+        .header-item {
+            @extend %flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px  20px;
+            @include breakpoint (lg) {
+                padding: 0 60px;
+            }
+            @include breakpoint (xl) {
+                padding: 0 80px;
+            }
+            @include breakpoint (xxl) {
+                padding: 0 100px;
+            }
+            .header-logo {
+                @include breakpoint (lg) {
+                    width: 15%;
+                }
+                a.your-barnd {
+                   img {
+                       height: 46px;
+                   }
+                }
+            }
+            .header-menu {
+                .overlay {
+                    width: 100vw;
+                    height: 100vh;
+                    position: absolute;
+                    top: 0;
+                    left: -100vw;
+                    display: none;
+                    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+                    background: rgba(49, 27, 146, 0.2);
+                    transition: all 0.3s ease-in-out;
+                    z-index: 9;
+                    &.active {
+                        left: 0;
+                        display: block;
+                        @include breakpoint (lg) {
+                            display: none;
+                        }
+                    }
+                }
+                .main-menu {
+                    @include breakpoint (max-lg) {
+                        position: absolute;
+                        top: 0;
+                        width: 300px;
+                        height: calc(100vh - 0px);
+                        left: -300px;
+                        z-index: 9;
+                        overflow-y: scroll;
+                        background-color: $theme-color;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &.open {
+                        left: 0;
+                        ul.menu-list {
+                            padding: 20px 0 20px 50px;
+                        }
+                    }
+                    ul.menu-list {
+                        margin: 0;
+                        display: block;
+                        @include breakpoint (lg) {
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                        }
+                        li {
+                            list-style: none;
+                            position: relative;
+                            &:first-child {
+                                a {
+                                    @include breakpoint (lg) {
+                                        padding-left: 0;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                a.btn{
+                                   padding: 10px 20px;
+                                   color: $white-color;
+                                }
+                            }
+                            &::before {
+                                @extend %absolute;
+                                top: 50%;
+                                left: -10%;
+                                height: 10px;
+                                width: 10px;
+                                border-radius: 100%;
+                                border: 3px solid $white-color;
+                                transform: translateY(-50%)scale(0);
+                                @include breakpoint (max-sm) {
+                                    transform: scale(1.1)translateY(-50%);
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: $white-color;
+                                    @include breakpoint (lg) {
+                                        color: $theme-color;
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            padding: 12px 20px;
+                            color: $white-color;
+                            display: inline-block;
+                            text-decoration: none;
+                            transition: all 0.3s ease-in-out;
+                            @include breakpoint (lg) {
+                                color: #000;
+                                padding: 28px 20px;
+                            } 
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+                .mobile-bar {
+                    display: block;  
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    position: relative;
+                    margin: 0 15px;
+                    @include breakpoint (lg) {
+                        display: none;
+                    }
+                    &.close { 
+                        opacity: 1;
+                        span {
+                            &:nth-child(1) {
+                                transform: translate(-100%, -50%) rotate(45deg);
+                                margin-right: 0px;
+                            }
+                            &:nth-child(2) {
+                                margin: 3px 0px;
+                                transform: translate(-70%, -50%) rotate(-45deg);
+                            }
+                            &:nth-child(3) {
+                                transform: translate(-70%, -50%) rotate(45deg);
+                                top: 26px;
+                            }
+                        }
+                    }
+                    span{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 30px;
+                        height: 4px;
+                        z-index: 1;
+                        border-radius: 4px;
+                        background: $theme-color;
+                        transform: translate(-50%, -50%);
+                        transition: all .3s ease;
+                        &:nth-child(1) {
+                            width: 14px;
+                            margin-top: 8px;
+                            margin-left: 8px;
+                        }
+                        &:nth-child(3) {
+                            width: 14px;
+                            margin-top: -9px;
+                            margin-left: -8px;
+                        }
+                    }
+                }
+            }
+        }
+        &.menu-fixed  {
+            position: fixed !important;
+            top: 0px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: #4e505d;
+            box-shadow: 0px 0 10px rgba(136, 136, 136, 0.10);
+            .header-item {
+                .header-menu {
+                    .main-menu {
+                        ul.menu-list {
+                            li {
+                                a {
+                                    color: $white-color;
+                                }
+                                &.active {
+                                    a {
+                                        color: $white-color;
+                                        @include breakpoint (lg) {
+                                            color: $theme-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.slideInUp{
+            position: relative;
+            z-index: 999;
+        }
+    }
+}
+//*======= header css ends  =====*//

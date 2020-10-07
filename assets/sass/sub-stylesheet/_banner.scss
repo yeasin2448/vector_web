@@ -1,0 +1,56 @@
+//*===== banner area start ====*//
+.banner-area {
+    height: 800px;
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: $white-color;
+    .banner-content {
+        @extend %flex;
+        align-items: center;
+        .banner-text {
+            width: 60%;
+            h2 {
+                margin: 0;
+                line-height: 1.5;
+                margin: 0;
+            }
+            p {
+                padding-top: 25px;
+                max-width: 560px;
+                margin-left: 0;
+            }
+        }
+        .banner-thumb {
+            width: calc(100% - 60%);
+        }
+    }
+}
+//*===== banner area End ====*//
+
+//*===== page header start ====*//
+.page-header {
+    height: 550px;
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #F4E2E3, #EFF0F6);
+    .banner-content {
+        text-align: center;
+        p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+    &.style-two {
+        height: 800px;
+        background-image: none;
+        .banner-content {
+            h2 {
+                padding-bottom: 25px;
+            }
+        }
+    }
+}
+//*===== page header ends  ====*//
