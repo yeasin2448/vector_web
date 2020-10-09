@@ -52,5 +52,15 @@
             }
         }
     }
+    &.style-three {
+        background: $white-color;
+        .banner-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            background-position: center;        
+        }
+    }
 }
 //*===== page header ends  ====*//

@@ -737,6 +737,14 @@ header {
     background-image: none; }
     .page-header.style-two .banner-content h2 {
       padding-bottom: 25px; }
+  .page-header.style-three {
+    background: #fff; }
+    .page-header.style-three .banner-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+      background-position: center; }
 
 .speciality-area {
   padding: 120px 0;
