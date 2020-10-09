@@ -361,7 +361,7 @@ form .input-group {
     font-size: 14px;
     padding-left: 35px;
     border: 1px solid #E45255;
-    border-radius: 3px;
+    border-radius: 5px;
     background: transparent;
     transition: all 0.3s ease-in-out; }
     form .input-group input.form-control::placeholder {
@@ -466,7 +466,7 @@ form button.custom-btn {
   100% {
     -webkit-transform: scale(1, 1);
     opacity: 0; } }
-header .header-bg .header-item, .banner-area, .banner-area .banner-content, .page-header, .clients-area .section-wrapper .clients-slider .swiper-wrapper .swiper-slide .clients-item .clients-top, .clients-area .section-wrapper .clients-slider .swiper-wrapper .swiper-slide .clients-item .clients-top .thumbel-left, footer .footer-bottom, footer .footer-bottom .footer-media ul.mendia-list, .working-area .section-wrapper ul.working-bar, .team-area .section-wrapper .team-slider .swiper-wrapper .swiper-slide .team-item .item-text ul.mendia-list {
+header .header-bg .header-item, .banner-area, .banner-area .banner-content, .page-header, .clients-area .section-wrapper .clients-slider .swiper-wrapper .swiper-slide .clients-item .clients-top, .clients-area .section-wrapper .clients-slider .swiper-wrapper .swiper-slide .clients-item .clients-top .thumbel-left, footer .footer-bottom, footer .footer-bottom .footer-media ul.mendia-list, .working-area .section-wrapper ul.working-bar, .team-area .section-wrapper .team-slider .swiper-wrapper .swiper-slide .team-item .item-text ul.mendia-list, .speakus-area .section-wrapper .speak-item {
   display: flex;
   flex-wrap: wrap; }
 
@@ -1141,6 +1141,51 @@ footer {
           max-width: 430px;
           margin-left: 0;
           display: inline-block; }
+
+.speakus-area {
+  padding: 120px 0; }
+  .speakus-area .section-header {
+    text-align: left;
+    padding-bottom: 26px; }
+    .speakus-area .section-header h4 {
+      margin: 0;
+      color: #1d2440; }
+  .speakus-area .section-wrapper .speak-item {
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #F4E2E3;
+    justify-content: space-between; }
+    @media (max-width: 575px) {
+      .speakus-area .section-wrapper .speak-item {
+        display: block; } }
+    .speakus-area .section-wrapper .speak-item .item-left {
+      display: flex; }
+      .speakus-area .section-wrapper .speak-item .item-left .host-icon {
+        margin-right: 48px; }
+        .speakus-area .section-wrapper .speak-item .item-left .host-icon i {
+          font-size: 40px; }
+      .speakus-area .section-wrapper .speak-item .item-left .host-des h6 {
+        margin: 0; }
+    .speakus-area .section-wrapper .speak-item .item-middle p {
+      margin: 0; }
+    .speakus-area .section-wrapper .speak-item .item-right button.btn {
+      background: #6B7EA5; }
+
+.conversation-area {
+  padding-bottom: 100px; }
+  .conversation-area .section-header {
+    padding-bottom: 16px; }
+  .conversation-area .section-wrapper form .input-group input.form-control {
+    border-radius: 5px !important;
+    border-color: #a7a2a2; }
+    .conversation-area .section-wrapper form .input-group input.form-control::placeholder {
+      color: #a7a2a2; }
+  .conversation-area .section-wrapper form .input-group i {
+    color: #a7a2a2; }
+  .conversation-area .section-wrapper form .input-group textarea {
+    border-color: #a7a2a2; }
+    .conversation-area .section-wrapper form .input-group textarea::placeholder {
+      color: #a7a2a2; }
 
 .scrollToTop {
   position: fixed;
